@@ -8,7 +8,9 @@
     "lint:eslint:fix": "eslint --ext .js --ignore-path .eslintignore --fix .",
     "lint:staged": "lint-staged",
     "prettify": "prettier --write '**/*.js' '**/*.jsx'",
-    "test": "npm run lint"
+    "test": "npm run lint",
+    "deploy:prod": "rsync -avzhe ssh --progress ./.build/* wekan@139.162.164.199:/home/wekan/prod/.build && rsync -avzhe ssh --progress --chmod=rX./dreams-start-wekan.sh wekan@139.162.164.199:/home/wekan/prod/dreams-start-wekan.sh",
+    "deploy:start": "rsync -avzhe ssh --progress --chmod=Fu=rx ./dreams-start-wekan.sh wekan@139.162.164.199:/home/wekan/prod/dreams-start-wekan.sh"
   },
   "lint-staged": {
     "*.js": [

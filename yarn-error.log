@@ -1,0 +1,115 @@
+Arguments: 
+  /usr/local/bin/node /usr/bin/yarn deploy:start
+
+PATH: 
+  /home/dreamer/bin:/usr/local/bin:/home/dreamer/.gem/ruby/2.7.0/bin:/usr/local/bin:/usr/bin:/bin:/usr/local/sbin:/usr/lib/jvm/default/bin:/usr/bin/site_perl:/usr/bin/vendor_perl:/usr/bin/core_perl
+
+Yarn version: 
+  1.22.4
+
+Node version: 
+  12.22.1
+
+Platform: 
+  linux x64
+
+Trace: 
+  SyntaxError: /home/dreamer/code/wekan/package.json: Unexpected string in JSON at position 615
+      at JSON.parse (<anonymous>)
+      at /usr/lib/node_modules/yarn/lib/cli.js:1625:59
+      at Generator.next (<anonymous>)
+      at step (/usr/lib/node_modules/yarn/lib/cli.js:310:30)
+      at /usr/lib/node_modules/yarn/lib/cli.js:321:13
+
+npm manifest: 
+  {
+    "name": "wekan",
+    "version": "v5.20.0",
+    "description": "Open-Source kanban",
+    "private": true,
+    "scripts": {
+      "lint": "eslint --cache --ext .js --ignore-path .eslintignore .",
+      "lint:eslint:fix": "eslint --ext .js --ignore-path .eslintignore --fix .",
+      "lint:staged": "lint-staged",
+      "prettify": "prettier --write '**/*.js' '**/*.jsx'",
+      "test": "npm run lint",
+      "deploy:prod": "rsync -avzhe ssh --progress ./.build/* wekan@139.162.164.199:/home/wekan/prod && rsync -avzhe ssh --progress --chmod=rX./dreams-start-wekan.sh wekan@139.162.164.199:/home/wekan/prod/dreams-start-wekan.sh"
+      "deploy:start": "rsync -avzhe ssh --progress --chmod=rX./dreams-start-wekan.sh wekan@139.162.164.199:/home/wekan/prod/dreams-start-wekan.sh"
+    },
+    "lint-staged": {
+      "*.js": [
+        "meteor npm run prettify",
+        "meteor npm run lint:eslint:fix",
+        "git add --force"
+      ],
+      "*.jsx": [
+        "meteor npm run prettify",
+        "meteor npm run lint:eslint:fix",
+        "git add --force"
+      ],
+      "*.json": [
+        "prettier --write",
+        "git add --force"
+      ]
+    },
+    "pre-commit": "lint:staged",
+    "eslintConfig": {
+      "extends": "@meteorjs/eslint-config-meteor"
+    },
+    "repository": {
+      "type": "git",
+      "url": "git+https://github.com/wekan/wekan.git"
+    },
+    "license": "MIT",
+    "bugs": {
+      "url": "https://github.com/wekan/wekan/issues"
+    },
+    "homepage": "https://wekan.github.io",
+    "devDependencies": {
+      "babel-eslint": "^10.1.0",
+      "eslint": "^5.16.0",
+      "eslint-config-meteor": "0.0.9",
+      "eslint-config-prettier": "^3.6.0",
+      "eslint-import-resolver-meteor": "^0.4.0",
+      "eslint-plugin-import": "^2.20.0",
+      "eslint-plugin-meteor": "^5.1.0",
+      "eslint-plugin-prettier": "^3.1.2",
+      "lint-staged": "^7.3.0",
+      "pre-commit": "^1.2.2",
+      "prettier": "^1.19.1",
+      "prettier-eslint": "^9.0.2"
+    },
+    "dependencies": {
+      "@babel/core": "^7.9.6",
+      "@babel/runtime": "^7.9.6",
+      "@root/request": "^1.6.1",
+      "ajv": "^6.12.4",
+      "babel-runtime": "^6.26.0",
+      "bcrypt": "^5.0.0",
+      "bson": "^4.0.3",
+      "bunyan": "^1.8.12",
+      "es6-promise": "^4.2.4",
+      "exceljs": "^4.2.1",
+      "fibers": "^5.0.0",
+      "flatted": "^3.0.4",
+      "gridfs-stream": "https://github.com/wekan/gridfs-stream/tarball/master",
+      "jszip": "^3.4.0",
+      "ldapjs": "^2.1.1",
+      "markdown-it": "^12.0.2",
+      "markdown-it-emoji": "^2.0.0",
+      "meteor-node-stubs": "^1.0.3",
+      "mongodb": "^3.6.2",
+      "os": "^0.1.1",
+      "page": "^1.11.5",
+      "papaparse": "^5.2.0",
+      "qs": "^6.9.4",
+      "source-map-support": "^0.5.19",
+      "xss": "^1.0.8"
+    }
+  }
+
+yarn manifest: 
+  No manifest
+
+Lockfile: 
+  No lockfile
