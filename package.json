@@ -28,7 +28,6 @@
       "git add --force"
     ]
   },
-  "pre-commit": "lint:staged",
   "eslintConfig": {
     "extends": "@meteorjs/eslint-config-meteor"
   },

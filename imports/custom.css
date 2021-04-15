@@ -1,0 +1,79 @@
+body {
+  background: #d0e6d5 !important;
+  background-image: url("https://cloud.cannabisworldchain.com/s/CAcpRsXR6fmjdGp/preview") !important;
+  background-size: cover !important;
+  background-position: center center !important;
+  background-repeat: no-repeat !important;
+  background-attachment: fixed !important;
+}
+
+#header {
+  background: linear-gradient(270deg, rgba(32,100,159,0) 0%, rgb(12, 140, 103) 100%) !important;
+}
+
+#header-quick-access {
+  background: linear-gradient(90deg, rgb(14, 40, 63) 0%, rgb(12, 140, 103) 64%, rgba(106, 153, 45, 0.4) 100%) !important;
+  height: 50px !important;
+  padding-left: 20px !important;
+}
+
+.auth-layout > img:nth-child(2) {
+  background: linear-gradient(270deg, rgba(32,100,159,0) 0%, rgb(12, 140, 103) 100%) !important;
+  padding: 13px !important;
+}
+
+#at-pwd-form label {
+  /* color: #0d8b66 !important; */
+}
+
+#at-btn {
+  background: #0d8b66 !important;
+}
+
+.auth-layout .auth-dialog {
+  background: rgba(255, 255, 255, 0.88) !important;
+}
+
+.board-list .board-list-item {
+  background-color: rgba(164, 201, 172, 0.3);
+}
+
+.board-list .js-add-board :hover {
+  background-color: rgba(164, 201, 172, 0.5);
+}
+
+.board-wrapper .board-canvas .board-overlay {
+  background: #7cae8d !important;
+  opacity: 0.6 !important;
+}
+
+.board-color-morevibe#header ul li.current,
+.board-color-morevibe#header-quick-access ul li.current {
+  border-bottom: 4px solid #6fcc89;
+}
+
+#header-quick-access .allBoards {
+  padding-top: 13px;
+}
+
+#header-quick-access ul.header-quick-access-list {
+  margin: 0;
+  padding-top: 13px;
+}
+
+@media screen and (max-width: 800px) {
+  #header-quick-access span .fa-home {
+    margin-top: 10px;
+  }
+}
+
+.swimlane {
+  background: rgba(164,201,172,0.25);
+}
+
+.board-color-morevibe#header,
+.board-color-morevibe.sk-spinner div,
+.board-backgrounds-list .board-color-morevibe.background-box,
+.board-list .board-color-morevibe a {
+  background-color: #96c0a2;
+}

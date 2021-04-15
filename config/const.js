@@ -1,4 +1,5 @@
 export const ALLOWED_BOARD_COLORS = [
+  'morevibe',
   'belize',
   'nephritis',
   'pomegranate',

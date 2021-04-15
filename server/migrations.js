@@ -107,6 +107,7 @@ Migrations.add('card-covers', () => {
 
 Migrations.add('use-css-class-for-boards-colors', () => {
   const associationTable = {
+    '#0e3645': 'morevibe',
     '#27AE60': 'nephritis',
     '#C0392B': 'pomegranate',
     '#2980B9': 'belize',
