@@ -65,6 +65,10 @@ body {
   #header-quick-access span .fa-home {
     margin-top: 10px;
   }
+
+  .auth-layout {
+    align-items: normal;
+  }
 }
 
 .swimlane {
